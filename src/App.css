@@ -72,3 +72,13 @@ h1 {
   text-align: center;
   border: 1px dotted lightgray;
 }
+body{
+  direction: rtl;
+}
+
+.svc-creator__banner{
+  display: none;
+}
+.sa-commercial{
+  display: none;
+}
