@@ -643,4 +643,4 @@ export const survey2Results = [
     {'member_array_employer':[{}],'partner_array_employer':[{}],'maritalstatus_c':'Single','member_receives_income_from_employment':'1','member_type_of_employment':['Self employment'],'member_seasonal_intermittent_or_contract_work':'0'}
 ];
 
-export var apiBaseAddress = 'http://127.0.0.1:8000/api';
+export var apiBaseAddress = 'http://survey-api.mohammadmaso.ir/api';
