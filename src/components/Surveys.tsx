@@ -23,7 +23,11 @@ const Surveys = (): React.ReactElement => {
         {surveys.map((survey: any) => (
           <tr key={survey.id} className="sjs-surveys-list__row">
             <td>
-              <span>{survey.name == null ? 'بدون عنوان' : survey.name}</span>
+              <span>
+                {survey.content?.title == null
+                  ? 'بدون عنوان'
+                  : survey.content.title}
+              </span>
             </td>
             <td>
               <Link className="sjs-button" to={'run/' + survey.id}>

@@ -3,15 +3,18 @@ import { useReduxDispatch } from '../redux';
 import { get, update } from '../redux/surveys';
 import { SurveyCreator, SurveyCreatorComponent } from 'survey-creator-react';
 import 'survey-creator-core/survey-creator-core.css';
-
+import { ICreatorOptions, localization } from 'survey-creator-core';
+import '../localization/persian.ts';
 const Editor = (params: { id: string }): React.ReactElement => {
   const dispatch = useReduxDispatch();
   const creator = useMemo(() => {
-    const options = {
+    const options: ICreatorOptions = {
       showLogicTab: true,
       showTranslationTab: true,
       isRTL: true,
     };
+    localization.currentLocale = 'fa';
+
     return new SurveyCreator(options);
   }, []);
   creator.isAutoSave = true;
