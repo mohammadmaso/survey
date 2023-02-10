@@ -65,27 +65,27 @@ const surveysSlice = createSlice({
 })
 
 export const load = createAsyncThunk('surveys/load', async () => {
-    const response = await axios.get(apiBaseAddress + '/getActive')
+    const response = await axios.get(apiBaseAddress + '/SurveySchemas/')
     return response.data
 })
 
 export const get = createAsyncThunk('surveys/get', async (id: string) => {
-    const response = await axios.get(apiBaseAddress + '/getSurvey?surveyId=' + id)
+    const response = await axios.get(apiBaseAddress + '/SurveySchemas/' + id)
     return response.data
 })
 
 export const create = createAsyncThunk('surveys/create', async () => {
-    const response = await axios.get(apiBaseAddress + '/create')
+    const response = await axios.post(apiBaseAddress + '/SurveySchemas/')
     return response.data
 })
 
 export const remove = createAsyncThunk('surveys/delete', async (id: string) => {
-    const response = await axios.get(apiBaseAddress + '/delete?id=' + id)
+    const response = await axios.delete(apiBaseAddress + '/SurveySchemas/' + id + "/")
     return response.data
 })
 
 export const update = createAsyncThunk('surveys/update', async (data: {id: string, json: any, text: string}) => {
-    const response = await axios.post(apiBaseAddress + '/changeJson', data)
+    const response = await axios.put(apiBaseAddress + '/update/'+data.id+"/", data)
     return response.data
 })
 
