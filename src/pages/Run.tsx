@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
-import { useReduxDispatch, useReduxSelector, useSearchParams } from '../redux';
+import { useSearchParams } from 'react-router-dom';
+import { useReduxDispatch, useReduxSelector } from '../redux';
 import { post } from '../redux/results';
 import { Model, StylesManager } from 'survey-core';
 import { Survey } from 'survey-react-ui';
@@ -23,15 +24,18 @@ const Run = () => {
       const surveyAction = await dispatch(get(id as string));
       setModel(new Model(surveyAction.payload.content));
       const model = new Model(surveyAction.payload.content);
-      console.log(model);
     })();
   }, [dispatch, id]);
 
   model.onComplete.add((sender: Model) => {
+    let hiddenValues = {
+      email: searchParams.get('email'),
+      name: searchParams.get('name'),
+    };
     dispatch(
       post({
         survey_schema_id: id as string,
-        content: sender.data,
+        content: { ...sender.data, ...hiddenValues },
       })
     );
   });
