@@ -23,7 +23,7 @@
 /* .sjs-nav-button.active {
   text-decoration: underline;
 } */
-*/ .sjs-client-app__content {
+.sjs-client-app__content {
   /* position: fixed; */
   /* top: 64px; */
   margin-top: 20px;
