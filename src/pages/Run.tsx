@@ -1,5 +1,5 @@
 import { useParams } from 'react-router';
-import { useReduxDispatch, useReduxSelector } from '../redux';
+import { useReduxDispatch, useReduxSelector, useSearchParams } from '../redux';
 import { post } from '../redux/results';
 import { Model, StylesManager } from 'survey-core';
 import { Survey } from 'survey-react-ui';
@@ -11,6 +11,7 @@ StylesManager.applyTheme('defaultV2');
 
 const Run = () => {
   const { id } = useParams();
+  const [searchParams] = useSearchParams();
   const dispatch = useReduxDispatch();
   //   const surveys = useReduxSelector((state) => state.surveys.surveys);
   //   const survey = surveys.filter((s) => s.id === id)[0];
