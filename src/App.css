@@ -70,7 +70,7 @@ h1 {
 }
 
 * {
-  font-family: IranYekanFanum;
+  font-family: Sahel;
 }
 
 .svc-creator__banner {
@@ -78,14 +78,94 @@ h1 {
 
 }
 
+
+
+.sa-commercial {
+  display: none;
+}
+
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/assets/fonts/Sahel.eot');
+  src: url('/assets/fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Sahel.woff2') format('woff2'),
+    url('/assets/fonts/Sahel.woff') format('woff'),
+    url('/assets/fonts/Sahel.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/assets/fonts/Sahel-Bold.eot');
+  src: url('/assets/fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Sahel-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Sahel-Bold.woff') format('woff'),
+    url('/assets/fonts/Sahel-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/assets/fonts/Sahel-Light.eot');
+  src: url('/assets/fonts/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Sahel-Light.woff2') format('woff2'),
+    url('/assets/fonts/Sahel-Light.woff') format('woff'),
+    url('/assets/fonts/Sahel-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/assets/fonts/Sahel-SemiBold.eot');
+  src: url('/assets/fonts/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Sahel-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/Sahel-SemiBold.woff') format('woff'),
+    url('/assets/fonts/Sahel-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Sahel;
+  src: url('/assets/fonts/Sahel-Black.eot');
+  src: url('/assets/fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Sahel-Black.woff2') format('woff2'),
+    url('/assets/fonts/Sahel-Black.woff') format('woff'),
+    url('/assets/fonts/Sahel-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+* {
+  font-family: Sahel !important
+}
+
 .spg-input,
 .svc-toolbox__item-title,
 .svc-text,
 .svc-tabbed-menu-item__text,
-.svc-text--normal {
-  font-family: IranYekan;
+.svc-text--normal, .sd-dropdown__filter-string-input {
+  font-family: Sahel !important;
 }
 
-.sa-commercial {
+.sd-element__num {
   display: none;
+}
+
+.sd-body {
+  min-height: 80vh;
+}
+
+.sd-item__control-label{
+  text-align: right !important;
+}
+
+.sd-root-modern.sd-root-modern--mobile, .sd-table__cell.sd-matrix__cell, .sd-matrix__responsive-title {
+  margin-right: 4px !important;
 }
