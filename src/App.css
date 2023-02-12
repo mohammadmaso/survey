@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .sjs-client-app__logo {
   vertical-align: middle;
 }
@@ -70,7 +71,7 @@ h1 {
 }
 
 * {
-  font-family: Sahel;
+  font-family: 'Vazirmatn', sans-serif !important;
 }
 
 .svc-creator__banner {
@@ -143,7 +144,7 @@ code {
 }
 
 * {
-  font-family: Sahel !important
+  font-family: 'Vazirmatn', sans-serif !important;
 }
 
 .spg-input,
@@ -151,12 +152,14 @@ code {
 .svc-text,
 .svc-tabbed-menu-item__text,
 .svc-text--normal, .sd-dropdown__filter-string-input {
-  font-family: Sahel !important;
+  font-family: 'Vazirmatn', sans-serif !important;
 }
 
-.sd-element__num {
+/* .sd-element__num {
   display: none;
-}
+} */
+
+
 
 .sd-body {
   min-height: 80vh;
@@ -169,3 +172,4 @@ code {
 .sd-root-modern.sd-root-modern--mobile, .sd-table__cell.sd-matrix__cell, .sd-matrix__responsive-title {
   margin-right: 4px !important;
 }
+
