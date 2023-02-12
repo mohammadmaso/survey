@@ -184,3 +184,15 @@ code {
   align-items: flex-end;
   flex-direction: column;
 }
+
+
+.sd-element--complex:not(.sd-element--collapsed)>.sd-element__header--location-top {
+  display: flex;
+  padding-bottom: var(--sd-base-vertical-padding);
+  padding-top: var(--sd-base-vertical-padding);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  text-align: rtl;
+}
