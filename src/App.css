@@ -173,3 +173,14 @@ code {
   margin-right: 4px !important;
 }
 
+.svc-question__adorner {
+ 
+  width: fit-content;
+}
+
+.svc-question__content .sd-question.sd-question--table {
+  
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
