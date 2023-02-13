@@ -196,3 +196,8 @@ code {
   align-items: flex-end;
   text-align: rtl;
 }
+
+.sv-list__item span {
+  white-space: normal;
+  word-break: break-word;
+}
