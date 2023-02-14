@@ -29,8 +29,8 @@ const Run = () => {
 
   model.onComplete.add((sender: Model) => {
     let hiddenValues = {
-      email: searchParams.get('email'),
-      name: searchParams.get('name'),
+      email: searchParams.get('e'),
+      name: searchParams.get('n'),
     };
     dispatch(
       post({
