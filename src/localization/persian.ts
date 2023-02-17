@@ -688,7 +688,7 @@ var persianStrings = {
     showAnsweredQuestions: "فعال سازی پیش نمایش به سوالات پاسخ داده شده",
     // pages: "Completed pages",
     // questions: "Answered questions",
-    // requiredQuestions: "Answered required questions",
+    requiredQuestions: "سوالات اجباری را پاسخ دهید.",
     // correctQuestions: "Valid answers",
     // buttons: "Completed pages (button UI)",
     // underInput: "Under the input",

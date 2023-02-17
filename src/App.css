@@ -201,3 +201,10 @@ code {
   white-space: normal;
   word-break: break-word;
 }
+
+.logos{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}

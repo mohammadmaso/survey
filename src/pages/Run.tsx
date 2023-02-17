@@ -18,6 +18,7 @@ const Run = () => {
   //   const survey = surveys.filter((s) => s.id === id)[0];
   //   const model = new Model(survey.json);
   const [model, setModel] = useState(new Model());
+  const [start, setStart] = useState(0);
 
   useEffect(() => {
     (async () => {
@@ -27,10 +28,15 @@ const Run = () => {
     })();
   }, [dispatch, id]);
 
+  useEffect(() => {
+    setStart(Date.now());
+  }, []);
+
   model.onComplete.add((sender: Model) => {
     let hiddenValues = {
       email: searchParams.get('e'),
       name: searchParams.get('n'),
+      time: Math.floor((Date.now() - start) / 1000),
     };
     dispatch(
       post({
@@ -41,7 +47,10 @@ const Run = () => {
   });
   return (
     <>
-      <h1></h1>
+      <div className="logos">
+        <img alt="Daneshbonyan" src="/DaneshBonyan.jpg" height="80" />
+        <img alt="IMOBS" src="/IMOBS.png" height="100" />
+      </div>
       <Survey model={model} />
     </>
   );
