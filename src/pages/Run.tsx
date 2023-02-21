@@ -34,7 +34,7 @@ const Run = () => {
 
   model.onComplete.add((sender: Model) => {
     let hiddenValues = {
-      id: searchParams.get('n'),
+      idd: searchParams.get('n'),
       time: Math.floor((Date.now() - start) / 1000),
     };
     dispatch(
