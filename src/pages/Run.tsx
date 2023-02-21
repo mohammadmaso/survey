@@ -34,8 +34,7 @@ const Run = () => {
 
   model.onComplete.add((sender: Model) => {
     let hiddenValues = {
-      email: searchParams.get('e'),
-      name: searchParams.get('n'),
+      id: searchParams.get('n'),
       time: Math.floor((Date.now() - start) / 1000),
     };
     dispatch(
