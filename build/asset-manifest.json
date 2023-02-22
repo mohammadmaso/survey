@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b3d614d.css",
-    "main.js": "/static/js/main.6b2f2df3.js",
+    "main.css": "/static/css/main.1ce6acb2.css",
+    "main.js": "/static/js/main.73b19cd7.js",
     "static/js/787.b5629b2c.chunk.js": "/static/js/787.b5629b2c.chunk.js",
     "static/media/Sahel-Light.eot": "/static/media/Sahel-Light.137729195ce78484bc1f.eot",
     "static/media/Sahel-Light.ttf": "/static/media/Sahel-Light.cd56a41cf0e0264324f8.ttf",
@@ -24,12 +24,12 @@
     "static/media/Sahel-SemiBold.woff2": "/static/media/Sahel-SemiBold.c024f9179787b5c0eb0b.woff2",
     "static/media/Sahel.woff2": "/static/media/Sahel.3649b9ebd8a04742645a.woff2",
     "index.html": "/index.html",
-    "main.1b3d614d.css.map": "/static/css/main.1b3d614d.css.map",
-    "main.6b2f2df3.js.map": "/static/js/main.6b2f2df3.js.map",
+    "main.1ce6acb2.css.map": "/static/css/main.1ce6acb2.css.map",
+    "main.73b19cd7.js.map": "/static/js/main.73b19cd7.js.map",
     "787.b5629b2c.chunk.js.map": "/static/js/787.b5629b2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b3d614d.css",
-    "static/js/main.6b2f2df3.js"
+    "static/css/main.1ce6acb2.css",
+    "static/js/main.73b19cd7.js"
   ]
 }

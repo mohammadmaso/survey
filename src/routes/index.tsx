@@ -29,7 +29,7 @@ const Content = (): React.ReactElement => (
       <Route path="/" element={<Home />}></Route>
       <Route path="/about" element={<About />}></Route>
       <Route path="/run/:id" element={<Run />}></Route>
-      <Route path="/edit/:id" element={<Edit />}></Route>
+      {/* <Route path="/edit/:id" element={<Edit />}></Route> */}
       <Route path="/results/:id" element={<Results />}></Route>
       <Route element={<NoMatch />}></Route>
     </Routes>
