@@ -7,6 +7,7 @@ import { Survey } from 'survey-react-ui';
 import 'survey-core/defaultV2.css';
 import { useEffect, useState } from 'react';
 import { get } from '../redux/surveys';
+import { Converter } from 'showdown';
 
 StylesManager.applyTheme('defaultV2');
 
@@ -31,6 +32,17 @@ const Run = () => {
   useEffect(() => {
     setStart(Date.now());
   }, []);
+
+  const converter = new Converter();
+  model.onTextMarkdown.add(function (model, options) {
+    // Convert Markdown to HTML
+    let str = converter.makeHtml(options.text);
+    // Remove root paragraphs <p></p>
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    // Set HTML markup to render
+    options.html = str;
+  });
 
   model.onComplete.add((sender: Model) => {
     let hiddenValues = {
