@@ -65,29 +65,41 @@ const surveysSlice = createSlice({
 })
 
 export const load = createAsyncThunk('surveys/load', async () => {
-    const response = await axios.get(apiBaseAddress + '/SurveySchemas/')
+    const response = await axios.get(apiBaseAddress + '/survey/SurveySchemas/')
     return response.data
 })
 
 export const get = createAsyncThunk('surveys/get', async (id: string) => {
-    const response = await axios.get(apiBaseAddress + '/SurveySchemas/' + id)
+    const response = await axios.get(apiBaseAddress + '/survey/SurveySchemas/' + id)
     return response.data
 })
 
 export const create = createAsyncThunk('surveys/create', async () => {
-    const response = await axios.post(apiBaseAddress + '/SurveySchemas/')
+    const response = await axios.post(apiBaseAddress + '/survey/SurveySchemas/')
     return response.data
 })
 
 export const remove = createAsyncThunk('surveys/delete', async (id: string) => {
-    const response = await axios.delete(apiBaseAddress + '/SurveySchemas/' + id + "/")
+    const response = await axios.delete(apiBaseAddress + '/survey/SurveySchemas/' + id + "/")
     return response.data
 })
 
 export const update = createAsyncThunk('surveys/update', async (data: {id: string, json: any, text: string}) => {
-    const response = await axios.put(apiBaseAddress + '/update/'+data.id+"/", data)
+    const response = await axios.put(apiBaseAddress + '/survey/update/'+data.id+"/", data)
     return response.data
 })
+
+
+export const login = createAsyncThunk('auth/login', async (data: {email: string, password: string }) => {
+    const response = await axios.put(apiBaseAddress + '/auth/login/', data)
+    return response.data
+})
+
+export const register = createAsyncThunk('auth/register', async (data: {email: string, password: string, password2: string}) => {
+    const response = await axios.put(apiBaseAddress + '/auth/register/', data)
+    return response.data
+})
+
 
 // export const { add, remove, update } = surveysSlice.actions
 export default surveysSlice.reducer
